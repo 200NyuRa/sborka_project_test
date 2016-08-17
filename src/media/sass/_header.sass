@@ -2,6 +2,7 @@
 /*________________________________________________*/
 .header
 	padding-top: 50px
+	margin-bottom: 20px
 
 	.skin
 		@extend .clearfix
@@ -38,11 +39,15 @@
 		line-height: 1.33
 		padding-left: 70px
 		position: relative
+		transition: all $default-transition-duration $default-transition-function
 
 		&:link,
 		&:visited
 			color: #fff
 			text-decoration: none
+
+		&:hover
+			color: rgba(255, 255, 255, 0.8)
 
 	&__user-ava
 		width: 50px
@@ -72,20 +77,22 @@
 		& + &
 			margin-left: 30px
 
-	&__nav-link:link,
-	&__nav-link:visited
+	&__nav-link
 		display: inline-block
 		vertical-align: top
-		color: #fff
 		font-size: 18px
 		font-weight: 300
 		line-height: 1.38
-		text-decoration: none
 		background-image: linear-gradient(rgba(#fff, .75), rgba(#fff, .75))
 		background-size: 0 2px
 		background-position: center bottom
 		background-repeat: no-repeat
 		transition: background 0s ease-out
+
+		&:link,
+		&:visited
+			text-decoration: none
+			color: #fff
 
 		&:hover,
 		&:visited

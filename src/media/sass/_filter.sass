@@ -1,0 +1,91 @@
+/*filter
+/*________________________________________________*/
+.filter
+	margin-bottom: 25px
+	&__main
+		font-size: 0
+		margin-bottom: 18px
+
+	&__main-item
+		display: inline-block
+		vertical-align: top
+		position: relative
+		padding: 0 28px
+
+	&__main-link
+		font-size: 28px
+		line-height: 1.36
+		font-weight: 300
+		transition: all $default-transition-duration $default-transition-function
+
+		&:link,
+		&:visited
+			text-decoration: none
+			color: rgba(#fff, .8)
+
+		&:hover,
+		&.active
+			color: #fff
+
+	&__secondary
+		font-size: 0
+		margin-bottom: 25px
+
+	&__secondary-item
+		padding-left: 28px
+		display: inline-block
+		vertical-align: top
+
+	&__secondry-link
+		font-size: 16px
+		line-height: 1.38
+		font-weight: 300
+		transition: color .2s $default-transition-function
+		position: relative
+
+		&:before
+			@extend %b
+			width: 30%
+			height: 2px
+			position: absolute
+			bottom: -7px
+			left: 0
+			transition: width $default-transition-duration $default-transition-function, background .2s $default-transition-function
+
+		&:link,
+		&:visited
+			text-decoration: none
+			color: rgba(#fff, .8)
+			background: rgba(#fff, 0)
+
+		&:hover,
+		&.active
+			color: #fff
+
+		&:hover:before,
+		&.active:before
+			background: rgba(#fff, .9)
+			width: 100%
+
+
+
+.badge
+	+box
+	box-sizing: border-box
+	display: inline-block
+	padding: 3px 5px
+	height: 18px
+	line-height: 1
+	min-width: 18px
+	max-width: 30px
+	overflow: hidden
+	font-size: 12px
+	text-align: center
+	border-radius: 50%
+	color: #fff
+	background: #f96262
+
+	&--filter
+		position: absolute
+		left: 93%
+		top: 5px
