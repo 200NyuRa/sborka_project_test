@@ -1,0 +1,11 @@
+.idea
+node_modules
+bower_components
+build
+*.log
+.editorconfig
+build.sh
+
+
+/src/templates/index.html
+

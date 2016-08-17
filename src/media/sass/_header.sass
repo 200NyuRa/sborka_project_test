@@ -1,0 +1,93 @@
+/*header
+/*________________________________________________*/
+.header
+	padding-top: 50px
+
+	.skin
+		@extend .clearfix
+
+	&__logo
+		+box
+		display: block
+		float: left
+		width: 282px
+		padding: 0 28px
+
+		&:link,
+		&:visited
+			color: #fff
+			text-decoration: none
+
+		img
+			max-width: 260px
+			height: auto
+			margin-bottom: 5px
+
+	&__logo-caption
+		display: block
+		width: 100%
+		font-size: 16px
+		line-height: 1.38
+
+	&__user-block
+		+box
+		float: right
+		width: 200px
+		min-height: 50px
+		font-size: 18px
+		line-height: 1.33
+		padding-left: 70px
+		position: relative
+
+		&:link,
+		&:visited
+			color: #fff
+			text-decoration: none
+
+	&__user-ava
+		width: 50px
+		height: 50px
+		border: 2px solid #d8d8d8
+		border-radius: 50%
+		position: absolute
+		background: #fff
+		top: 0
+		left: 0
+
+		img
+			width: 100%
+			height: auto
+
+	&__nav
+		white-space: nowrap
+		display: block
+		width: auto
+		margin: 0 200px 0 282px
+		padding: 0 28px
+
+	&__nav-item
+		display: inline-block
+		vertical-align: top
+
+		& + &
+			margin-left: 30px
+
+	&__nav-link:link,
+	&__nav-link:visited
+		display: inline-block
+		vertical-align: top
+		color: #fff
+		font-size: 18px
+		font-weight: 300
+		line-height: 1.38
+		text-decoration: none
+		background-image: linear-gradient(rgba(#fff, .75), rgba(#fff, .75))
+		background-size: 0 2px
+		background-position: center bottom
+		background-repeat: no-repeat
+		transition: background 0s ease-out
+
+		&:hover,
+		&:visited
+			background-size: 100% 2px
+			transition: background $default-transition-duration $default-transition-function
