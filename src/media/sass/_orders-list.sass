@@ -1,0 +1,48 @@
+/*requests-list
+/*________________________________________________*/
+.orders-list
+	padding: 0 28px
+
+	&__item
+		display: block
+		position: relative
+		font-weight: 300
+
+		& + &
+			margin-top: 30px
+
+	&__date
+		font-size: 12px
+		line-height: 1.42
+
+	&__parners
+		font-size: 20px
+		line-height: 1.36
+
+		&:link,
+		&:visited
+			color: #fff
+			text-decoration: none
+			transition: all $default-transition-duration $default-transition-function
+
+		&:hover,
+		&:active
+			color: rgba(#fff, .7)
+
+		&--order-open
+			position: relative
+			&:before
+				@extend %b
+				width: 10px
+				height: 10px
+				background: #747cf1
+				left: -20px
+				top: 10px
+				border-radius: 5px
+
+	&__quantity
+		font-size: 14px
+		line-height: 1.36
+
+
+
