@@ -1,0 +1,205 @@
+/*orders-cards
+/*________________________________________________*/
+.orders-cards
+	padding: 0 14px 10px 0
+	width: 100%
+
+	&__item
+		display: block
+		padding: 20px 40px 20px 30px
+		background: #fff
+		border-radius: 8px
+		position: relative
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15)
+
+		& + &
+			margin-top: 30px
+
+	&__title
+		display: block
+		font-size: 28px
+		line-height: 1.36
+		font-weight: 600
+		color: #000
+		padding-right: 226px
+		transition: all $default-transition-duration $default-transition-function
+
+		&:hover
+			color: rgba(0,0,0, .6)
+			text-decoration: none
+
+	&__title--order-open
+		position: relative
+		&:before
+			@extend %b
+			width: 10px
+			height: 10px
+			background: #747cf1
+			left: -20px
+			top: 16px
+			border-radius: 5px
+			clear: both
+
+	&__tabs
+		white-space: nowrap
+		position: absolute
+		top: 20px
+		right: 30px
+
+	&__tabs-item
+		display: inline-block
+		vertical-align: top
+
+		& + &
+			margin-left: 25px
+
+	&__tabs-link
+		font-size: 14px
+		line-height: 1.36
+		color: #7673af
+		position: relative
+
+		&:before
+			@extend %b
+			width: 30%
+			height: 1px
+			position: absolute
+			bottom: -5px
+			left: 0
+			background: rgba(#6e9ef0, 0)
+			border-radius: 4px
+			transition: width $default-transition-duration $default-transition-function, background .2s $default-transition-function
+
+		&:link,
+		&:visited
+			text-decoration: none
+			color: #7673af
+
+		&:hover,
+		&.active
+			color: #506be8
+
+		&:hover:before,
+		&.active:before
+			background: rgba(#6e9ef0, .6)
+			width: 100%
+
+	&__intro
+		max-width: 420px
+		margin-bottom: 15px
+
+		> p
+			color: rgba(0, 0, 0, .6)
+			font-size: 14px
+			line-height: 1.57
+
+	&__table
+		display: block
+		position: relative
+		margin-bottom: 30px
+
+		tbody,
+		th
+			display: block
+
+		td input
+			display: inline-block
+			width: 100%
+			border: none
+			outline: none
+			color: inherit
+			letter-spacing: 1.2px
+
+		tr
+			display: flex
+			justify-content: space-between
+
+		td,
+		th
+			display: flex
+			align-items: center
+
+		th
+			font-size: 14px
+			line-height: 1.36
+			padding: 9px 0
+
+			&:nth-child(-n+2)
+				color: rgba(#000, .6)
+
+			&:nth-child(n+3)
+				color: #34983c
+				text-align: center
+				padding-left: 5px
+				padding-right: 5px
+				border: 1px solid rgba(#8ed28e, .25)
+
+		td
+			font-size: 16px
+			line-height: 1.38
+			padding: 9px 0
+
+			&:nth-child(n+3)
+				color: #34983c
+				text-align: center
+				padding-left: 5px
+				padding-right: 5px
+				border: 1px solid rgba(#8ed28e, .25)
+
+		td:nth-child(1),
+		th:nth-child(1)
+			margin-right: auto
+			max-width: 55%
+
+		td:nth-child(2),
+		th:nth-child(2)
+			width: 120px
+
+		td:nth-child(3),
+		th:nth-child(3)
+			width: 90px
+			border-left: 3px solid #8ed28e
+
+		td:nth-child(4),
+		th:nth-child(4)
+			width: 120px
+			transform: translateX(-1px)
+			border-right: 3px solid #8ed28e
+
+		tr:first-child th:nth-child(3)
+			border-top-left-radius: 4px
+
+		tr:first-child th:nth-child(4)
+			border-top-right-radius: 4px
+
+		tr:first-child th:nth-child(3),
+		tr:first-child th:nth-child(4)
+			border-top: 3px solid #8ed28e
+
+		tr:last-child td:nth-child(3)
+			border-bottom-left-radius: 4px
+
+		tr:last-child td:nth-child(4)
+			border-bottom-right-radius: 4px
+
+		tr:last-child td:nth-child(3),
+		tr:last-child td:nth-child(4)
+			border-bottom: 3px solid #8ed28e
+
+	&__delivery
+		margin-bottom: 30px
+
+	&__panel-control
+
+		.btn
+			float: right
+
+		.btn + .btn
+			margin-right: 5px
+
+	&__add-comment
+		display: inline-block
+		vertical-align: middle
+		font-size: 14px
+		line-height: 1.36
+		padding: 14px 0 17px 0
