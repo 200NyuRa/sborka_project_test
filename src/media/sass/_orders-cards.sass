@@ -1,12 +1,14 @@
 /*orders-cards
 /*________________________________________________*/
 .orders-cards
-	padding: 0 14px 10px 0
+	+box
 	width: 100%
 
 	&__item
+		+box
 		display: block
-		padding: 20px 40px 20px 30px
+		max-width: 900px
+		padding: 20px 30px 20px 40px
 		background: #fff
 		border-radius: 8px
 		position: relative
@@ -22,6 +24,7 @@
 		font-weight: 600
 		color: #000
 		padding-right: 226px
+		margin-bottom: 10px
 		transition: all $default-transition-duration $default-transition-function
 
 		&:hover
@@ -43,7 +46,7 @@
 	&__tabs
 		white-space: nowrap
 		position: absolute
-		top: 20px
+		top: 30px
 		right: 30px
 
 	&__tabs-item
@@ -85,6 +88,7 @@
 			width: 100%
 
 	&__intro
+		width: 100%
 		max-width: 420px
 		margin-bottom: 15px
 
@@ -102,49 +106,28 @@
 		th
 			display: block
 
+		tr
+			display: flex
+
+		td
+			display: flex
+			align-items: center
+
 		td input
-			display: inline-block
+			position: absolute
 			width: 100%
+			height: 100%
 			border: none
 			outline: none
 			color: inherit
 			letter-spacing: 1.2px
+			padding-left: 5px
+			padding-right: 5px
+			top: 0
+			left: 0
 
-		tr
-			display: flex
-			justify-content: space-between
-
-		td,
-		th
-			display: flex
-			align-items: center
-
-		th
-			font-size: 14px
-			line-height: 1.36
-			padding: 9px 0
-
-			&:nth-child(-n+2)
-				color: rgba(#000, .6)
-
-			&:nth-child(n+3)
-				color: #34983c
-				text-align: center
-				padding-left: 5px
-				padding-right: 5px
-				border: 1px solid rgba(#8ed28e, .25)
-
-		td
-			font-size: 16px
-			line-height: 1.38
-			padding: 9px 0
-
-			&:nth-child(n+3)
-				color: #34983c
-				text-align: center
-				padding-left: 5px
-				padding-right: 5px
-				border: 1px solid rgba(#8ed28e, .25)
+			&:focus
+				box-shadow: inset 0 0 3px rgba(#34983c, 0.2)
 
 		td:nth-child(1),
 		th:nth-child(1)
@@ -157,37 +140,71 @@
 
 		td:nth-child(3),
 		th:nth-child(3)
-			width: 90px
-			border-left: 3px solid #8ed28e
+			width: 80px
+			border-left: 4px solid #8ed28e
+			border-right: 1px solid #c7e9c7
 
 		td:nth-child(4),
 		th:nth-child(4)
-			width: 120px
-			transform: translateX(-1px)
-			border-right: 3px solid #8ed28e
+			width: 118px
+			border-right: 4px solid #8ed28e
 
 		tr:first-child th:nth-child(3)
-			border-top-left-radius: 4px
+			border-top-left-radius: 8px
 
 		tr:first-child th:nth-child(4)
-			border-top-right-radius: 4px
+			border-top-right-radius: 8px
 
 		tr:first-child th:nth-child(3),
 		tr:first-child th:nth-child(4)
-			border-top: 3px solid #8ed28e
+			border-top: 4px solid #8ed28e
 
 		tr:last-child td:nth-child(3)
-			border-bottom-left-radius: 4px
+			border-bottom-left-radius: 8px
 
 		tr:last-child td:nth-child(4)
-			border-bottom-right-radius: 4px
+			border-bottom-right-radius: 8px
 
 		tr:last-child td:nth-child(3),
 		tr:last-child td:nth-child(4)
-			border-bottom: 3px solid #8ed28e
+			border-bottom: 4px solid #8ed28e
+
+		th
+			font-size: 14px
+			line-height: 1.36
+			padding: 10px 0 5px 0
+			text-align: left
+
+			&:nth-child(-n+2)
+				color: rgba(#000, .6)
+
+			&:nth-child(n+3)
+				color: #34983c
+				text-align: center
+				padding-left: 5px
+				padding-right: 5px
+
+		td
+			padding: 9px 0
+			position: relative
+			overflow: hidden
+
+			@media screen and (min-width: 768px)
+				padding: 5px 0
+
+			&:nth-child(n+3)
+				color: #34983c
+				justify-content: center
+				padding-left: 5px
+				padding-right: 5px
+				border-top: 1px solid rgba(#8ed28e, .5)
 
 	&__delivery
 		margin-bottom: 30px
+		width: 100%
+
+		@media screen and (max-width: 1000px)
+			max-width: 600px
 
 	&__panel-control
 

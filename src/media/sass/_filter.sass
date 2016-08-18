@@ -29,7 +29,7 @@
 
 	&__secondary
 		font-size: 0
-		margin-bottom: 25px
+		margin-bottom: 30px
 
 	&__secondary-item
 		padding-left: 28px
@@ -42,6 +42,9 @@
 		font-weight: 300
 		transition: color .2s $default-transition-function
 		position: relative
+		text-decoration: none
+		color: rgba(#fff, .8)
+		background: rgba(#fff, 0)
 
 		&:before
 			@extend %b
@@ -52,12 +55,6 @@
 			left: 0
 			transition: width $default-transition-duration $default-transition-function, background .2s $default-transition-function
 
-		&:link,
-		&:visited
-			text-decoration: none
-			color: rgba(#fff, .8)
-			background: rgba(#fff, 0)
-
 		&:hover,
 		&.active
 			color: #fff
@@ -66,26 +63,3 @@
 		&.active:before
 			background: rgba(#fff, .9)
 			width: 100%
-
-
-
-.badge
-	+box
-	box-sizing: border-box
-	display: inline-block
-	padding: 3px 5px
-	height: 18px
-	line-height: 1
-	min-width: 18px
-	max-width: 30px
-	overflow: hidden
-	font-size: 12px
-	text-align: center
-	border-radius: 50%
-	color: #fff
-	background: #f96262
-
-	&--filter
-		position: absolute
-		left: 93%
-		top: 5px
