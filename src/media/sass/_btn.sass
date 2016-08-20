@@ -1,9 +1,7 @@
 /*btn
 /*________________________________________________*/
 .btn
-	background: #8dace2
 	border-radius: 4px
-	color: #fff
 	font-size: 14px
 	line-height: 1.36
 	padding: 16px 34px 16px 34px
@@ -13,13 +11,28 @@
 	cursor: pointer
 	transition: all $default-transition-duration $default-transition-function
 
-	&:hover
-		background: #506be8
+	&--blue
+		background-color: #8dace2
+		color: #fff
+
+		&:hover
+			background-color: #506be8
+
+		&[disabled],
+		&.disabled
+			color: rgba(#fff, 0)
+			background-image: url("../img/preloader.gif")
+			background-position: center center
+			background-repeat: no-repeat
+			background-size: 35px 35px
+
+			&:hover
+				background-color: #8dace2
+				cursor: not-allowed
 
 	&--transparent
-		background: transparent
+		background-color: transparent
 		color: #000
 
 		&:hover
 			color: #506be8
-			background: transparent
