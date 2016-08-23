@@ -159,12 +159,12 @@ gulp.task('style:build', function () {
 
 gulp.task('image:build', function () {
 	gulp.src(PATHS.src.img)
-		.pipe(gulpif(CONFIG.compress.img, imagemin({
-			progressive: true,
-			svgoPlugins: [{removeViewBox: false}],
-			use: [pngquant()],
-			interlaced: true
-		})))
+		// .pipe(gulpif(CONFIG.compress.img, imagemin({
+		// 	progressive: true,
+		// 	svgoPlugins: [{removeViewBox: false}],
+		// 	use: [pngquant()],
+		// 	interlaced: true
+		// })))
 		.pipe(gulp.dest(PATHS.build.img));
 });
 
